@@ -1,26 +1,53 @@
-/*Arquivo CSS da aula de Desenvolvimento para Internet - Unipar 2025*/
-/*Reset CSS: Imortante para zerar todos os estilos já aplicados*/
-*{
-    margin:0px;
-    padding: 0px;
-    box-sizing:border-box;
+/* Estilos para o corpo da página */
+body {
+    font-family: sans-serif; 
+    margin: 20px; 
+    background-color: #f4f4f4; 
+    color: #333; 
 }
-/*Variáveis */
-/*Posso salvar nas variáveis, configurações que podem ser usadas globalmente no CSS*/
-:root{
-    --primary-color:purple;
-    --font-size:12px;
 
+/* Container principal para centralizar e controlar a largura */
+.container {
+    max-width: 960px; 
+    margin: 0 auto;
+    display: flex; 
+    gap: 20px; 
 }
-/*Componentes*/
-/*O que são componentes: Botões, Fomulários, Input´s, Select´s, etc...*/
-button{
-    background-color:var(--primary-color);/*Usando variáveis*/
-    font-size: var(--font-size);
-    color:azure;
-    padding: 2%;
-    height: 10%;
-    width: 50%;
-    min-height: 100px;
-    max-height: 500px;
+
+/* Estilos para cada card */
+.card {
+    background-color: #fff;
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    flex: 1; 
+}
+
+/* Estilos para o título dentro do card */
+.card h2 {
+    color: #007bff; 
+    margin-top: 0; 
+    margin-bottom: 10px; /
+}
+
+/* Estilos para a lista dentro do card */
+.card ul {
+    padding-left: 20px; 
+    margin-bottom: 0; 
+}
+
+/* Estilos para os itens da lista dentro do card */
+.card li {
+    margin-bottom: 5px; 
+}
+
+/* Media query para telas menores (celulares) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+    }
+
+    .card {
+        margin-bottom: 20px; 
+    }
 }
